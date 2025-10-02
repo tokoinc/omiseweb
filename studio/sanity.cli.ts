@@ -5,4 +5,5 @@ export default defineCliConfig({
     projectId: process.env.SANITY_PROJECT_ID,
     dataset: 'production',
   },
+  studioHost: 'omiseweb'
 })
