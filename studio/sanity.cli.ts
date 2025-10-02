@@ -1,9 +1,11 @@
-import {defineCliConfig} from 'sanity/cli'
+// apps/studio/sanity.cli.ts
+import 'dotenv/config';
+import {defineCliConfig} from 'sanity/cli';
 
 export default defineCliConfig({
   api: {
-    projectId: process.env.SANITY_PROJECT_ID,
-    dataset: 'production',
+    projectId: process.env.SANITY_PROJECT_ID!,
+    dataset: process.env.SANITY_DATASET || 'production',
   },
   studioHost: 'omiseweb'
-})
+});
